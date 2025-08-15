@@ -1,0 +1,25 @@
+{
+  "name": "agva-atv-safari",
+  "version": "1.0.0",
+  "description": "Ağva ATV Safari Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "atv",
+    "safari",
+    "agva",
+    "tour"
+  ],
+  "author": "Ağva ATV Safari",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "swiper": "^9.0.0"
+  }
+}
