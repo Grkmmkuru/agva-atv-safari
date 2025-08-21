@@ -1,0 +1,21 @@
+# commands/generate_tasks.txt
+
+Aşağıdaki bağlam dosyalarını analiz ederek, Ağva ATV Safari one-page website projesi için yapılacak işleri sırayla belirt.
+
+## Gerekenler:
+
+- Her işi ayrı madde olarak yaz
+- Görevleri uygulanabilir, sade ve mantıklı sırayla listele
+- Format: markdown task listesi (`- [ ]`)
+- Çıktıyı `output/task_list.md` dosyasına yaz
+
+## Bağlam Dosyaları:
+
+- `.context/rules.md`
+- `.context/structure.md`
+- `.context/ui.md`
+- `.context/brand.md`
+
+## Prompt Şablonu:
+
+- `prompts/generate_tasklist.tpl`

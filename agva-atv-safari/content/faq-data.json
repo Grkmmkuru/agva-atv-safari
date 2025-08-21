@@ -1,0 +1,29 @@
+{
+  "faq": [
+    {
+      "id": "license",
+      "question": "ATV kullanmak için ehliyet gerekli mi?",
+      "answer": "Hayır, ATV turlarımız için ehliyet gerekmez. Turdan önce temel eğitim verilir ve rehberlerimiz size eşlik eder. 16 yaş ve üzeri herkes katılabilir."
+    },
+    {
+      "id": "safety",
+      "question": "Güvenlik önlemleri nelerdir?",
+      "answer": "Tüm güvenlik ekipmanları (kask, eldiven, koruyucu gözlük) tarafımızdan sağlanır. Profesyonel rehberlerimiz her zaman yanınızda olur. İlk yardım ekipmanlarımız mevcuttur."
+    },
+    {
+      "id": "reservation",
+      "question": "Rezervasyon nasıl yapılır?",
+      "answer": "Telefon, WhatsApp veya web sitemiz üzerinden rezervasyon yapabilirsiniz. Rezervasyonunuzu onaylamak için %30 ön ödeme yeterlidir."
+    },
+    {
+      "id": "weather",
+      "question": "Hava durumu kötüyse ne olur?",
+      "answer": "Güvenlik önceliğimizdir. Kötü hava koşullarında turlar iptal edilir ve rezervasyonunuz başka bir tarihe ertelenir ya da ücretiniz iade edilir."
+    },
+    {
+      "id": "group-discount",
+      "question": "Grup indirimleri var mı?",
+      "answer": "Evet! 8 kişi ve üzeri gruplar için %15, 15 kişi ve üzeri gruplar için %20 indirim uygulanır. Kurumsal etkinlikler için özel paketlerimiz mevcuttur."
+    }
+  ]
+}

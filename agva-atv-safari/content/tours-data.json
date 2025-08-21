@@ -1,0 +1,52 @@
+{
+  "tours": [
+    {
+      "id": "atv-safari",
+      "title": "ATV Safari Turu",
+      "description": "Ağva'nın vahşi doğasında ATV ile unutulmaz bir macera deneyimi yaşayın.",
+      "duration": "2 Saat",
+      "price": 450,
+      "currency": "₺",
+      "badge": "Popüler",
+      "features": [
+        "Grup veya Bireysel",
+        "Güvenlik Ekipmanı Dahil",
+        "Profesyonel Rehber"
+      ],
+      "image": "assets/images/tours/atv-safari.jpg",
+      "category": "main"
+    },
+    {
+      "id": "jet-ski",
+      "title": "Deniz Bisikleti",
+      "description": "Karadeniz'in serinliğinde hızın ve özgürlüğün tadını çıkarın.",
+      "duration": "1 Saat",
+      "price": 350,
+      "currency": "₺",
+      "badge": "Yeni",
+      "features": [
+        "Deniz Manzarası",
+        "Can Yeleği Dahil",
+        "Eğitim Verilir"
+      ],
+      "image": "assets/images/tours/jet-ski.jpg",
+      "category": "side"
+    },
+    {
+      "id": "mountain-bike",
+      "title": "Kara Bisikleti Turu",
+      "description": "Doğa dostu bir şekilde Ağva'nın gizli köşelerini keşfedin.",
+      "duration": "3 Saat",
+      "price": 250,
+      "currency": "₺",
+      "badge": "Eco",
+      "features": [
+        "Doğa Rotası",
+        "Kaliteli Bisiklet",
+        "Çevre Dostu"
+      ],
+      "image": "assets/images/tours/mountain-bike.jpg",
+      "category": "side"
+    }
+  ]
+}

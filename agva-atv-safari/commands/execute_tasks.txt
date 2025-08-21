@@ -1,0 +1,26 @@
+# commands/execute_tasks.txt
+
+`output/task_list.md` içinde yer alan görevleri sırayla uygula.
+Her görev sonrası çıkan dosyayı `output/results/` klasörüne yerleştir.
+
+## Gerekenler:
+
+- Her görevi sırayla ve tek tek uygula
+- One-page website yapısında tüm bölümler tek HTML dosyasında
+- Bootstrap 5.3+ uyumlu, modern responsive tasarım
+- Hero slider, turlar, galeri, FAQ, footer bölümleri
+- Çıktılar `output/results/` içine yazılmalı
+
+## Kullanılan Dosyalar:
+
+- `output/task_list.md` → Görev listesi
+- `.context/rules.md`
+- `.context/structure.md`
+- `.context/ui.md`
+- `.context/brand.md`
+- `content/tours-data.json`
+- `content/faq-data.json`
+
+## Prompt Şablonu:
+
+- `prompts/execute_tasks.tpl`
