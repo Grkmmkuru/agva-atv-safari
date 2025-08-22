@@ -48,7 +48,7 @@ async function loadToursData() {
                         "Uzman rehber eşliği", 
                         "Grup veya bireysel seçenekler"
                     ],
-                    "image": "assets/images/tours/atv-safari.jpg",
+                    "image": "assets/images/tours/atv-mountain.jpg",
                     "category": "main"
                 },
                 {
@@ -64,7 +64,7 @@ async function loadToursData() {
                         "Muhteşem deniz manzarası",
                         "Can yeleği ve eğitim dahil"
                     ],
-                    "image": "assets/images/tours/jet-ski.jpg",
+                    "image": "assets/images/tours/agva-river-jetski.jpg",
                     "category": "side"
                 },
                 {
@@ -80,7 +80,7 @@ async function loadToursData() {
                         "Çevre dostu aktivite",
                         "Kaliteli dağ bisikletleri"
                     ],
-                    "image": "assets/images/tours/mountain-bike.jpg",
+                    "image": "assets/images/tours/mountain-bike-new.jpg",
                     "category": "side"
                 }
             ]
@@ -133,9 +133,8 @@ function createTourCard(tour) {
                     </div>
                 </div>
                 <div class="d-grid gap-2">
-                    <a href="https://wa.me/905313533555?text=${encodeURIComponent(`Merhaba Ağva ATV Safari!\n\n🏔️ ${tour.title} için rezervasyon yapmak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`)}" 
-                       class="btn btn-adventure" target="_blank">
-                        <i class="fab fa-whatsapp me-2"></i>Rezervasyon Yap
+                    <a href="tel:+905313533555" class="btn btn-adventure">
+                        <i class="fas fa-phone me-2"></i>Hemen Ara
                     </a>
                 </div>
             </div>
@@ -156,27 +155,37 @@ async function loadFAQData() {
                 {
                     "id": "license",
                     "question": "ATV kullanmak için ehliyet gerekli mi?",
-                    "answer": "Hayır, ATV turlarımız için ehliyet gerekmez. Turdan önce temel eğitim verilir ve rehberlerimiz size eşlik eder. 16 yaş ve üzeri herkes katılabilir."
+                    "answer": "Evet, ATV kullanabilmek için geçerli bir sürücü belgesine sahip olmanız gerekmektedir. Güvenlik önceliğimiz olduğu için bu zorunluluk bulunmaktadır."
                 },
                 {
-                    "id": "safety",
-                    "question": "Güvenlik önlemleri nelerdir?",
-                    "answer": "Tüm güvenlik ekipmanları (kask, eldiven, koruyucu gözlük) tarafımızdan sağlanır. Profesyonel rehberlerimiz her zaman yanınızda olur. İlk yardım ekipmanlarımız mevcuttur."
+                    "id": "capacity",
+                    "question": "ATV'ye kaç kişi binebilir?",
+                    "answer": "ATV'lerimize isterseniz tek kişi, isterseniz iki kişi binebilirsiniz. İki kişi binildiğinde bir kişi sürücü, diğeri yolcu olarak yer alır. Güvenlik açısından maksimum 2 kişi sınırı vardır."
                 },
                 {
                     "id": "reservation",
                     "question": "Rezervasyon nasıl yapılır?",
-                    "answer": "Telefon, WhatsApp veya web sitemiz üzerinden rezervasyon yapabilirsiniz. Rezervasyonunuzu onaylamak için %30 ön ödeme yeterlidir."
-                },
-                {
-                    "id": "weather",
-                    "question": "Hava durumu kötüyse ne olur?",
-                    "answer": "Güvenlik önceliğimizdir. Kötü hava koşullarında turlar iptal edilir ve rezervasyonunuz başka bir tarihe ertelenir ya da ücretiniz iade edilir."
+                    "answer": "Rezervasyon için bizi arayabilir (+90 531 353 35 55) veya WhatsApp'tan mesaj atabilirsiniz. Randevunuzu telefon görüşmesi sırasında netleştiriyoruz."
                 },
                 {
                     "id": "group-discount",
                     "question": "Grup indirimleri var mı?",
-                    "answer": "Evet! 8 kişi ve üzeri gruplar için %15, 15 kişi ve üzeri gruplar için %20 indirim uygulanır. Kurumsal etkinlikler için özel paketlerimiz mevcuttur."
+                    "answer": "Evet, grup rezervasyonları için indirimlerimiz mevcuttur. Grup büyüklüğüne göre indirim oranları değişmektedir. Detaylı bilgi için lütfen bizi arayın, koşulları görüşerek belirleyelim."
+                },
+                {
+                    "id": "age-limit",
+                    "question": "Yaş sınırı var mı?",
+                    "answer": "ATV kullanabilmek için 18 yaş ve üzeri olmanız ve geçerli sürücü belgenizin bulunması gerekmektedir. 18 yaş altındaki kişiler yolcu olarak katılabilirler."
+                },
+                {
+                    "id": "duration",
+                    "question": "Tur ne kadar sürer?",
+                    "answer": "ATV safari turumuz yaklaşık 1 saat sürmektedir. Bu süre değişiklik gösterebilir."
+                },
+                {
+                    "id": "experience",
+                    "question": "Daha önce ATV kullanmadım, sorun olur mu?",
+                    "answer": "Hiç problem olmaz! Tur öncesi detaylı eğitim ve güvenlik brifingi veriyoruz. Profesyonel rehberlerimiz deneyimsiz kullanıcılara özel yardım sağlar. Herkes güvenle katılabilir."
                 }
             ]
         };
@@ -250,24 +259,30 @@ function initializeNavbarEffects() {
     // Nav link click olayları
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Eğer link # ile başlıyorsa internal link, smooth scroll yap
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Mobile menüyü kapat
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
             }
-            
-            // Mobile menüyü kapat
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-                bsCollapse.hide();
-            }
+            // Eğer external link ise (blog.html gibi), normal şekilde çalışsın
+            // preventDefault() çağırmayız, böylece normal navigasyon gerçekleşir
         });
     });
 }
@@ -303,8 +318,8 @@ function updateActiveNavLink() {
  * Smooth scrolling initialize
  */
 function initializeSmoothScrolling() {
-    // Tüm internal linkler için smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Sadece # ile başlayan internal linkler için smooth scroll
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');

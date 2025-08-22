@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeForms();
     initializeWhatsAppIntegration();
-    initializeContactValidation();
 });
 
 /**
