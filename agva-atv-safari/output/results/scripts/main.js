@@ -259,24 +259,30 @@ function initializeNavbarEffects() {
     // Nav link click olayları
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Eğer link # ile başlıyorsa internal link, smooth scroll yap
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Mobile menüyü kapat
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
             }
-            
-            // Mobile menüyü kapat
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-                bsCollapse.hide();
-            }
+            // Eğer external link ise (blog.html gibi), normal şekilde çalışsın
+            // preventDefault() çağırmayız, böylece normal navigasyon gerçekleşir
         });
     });
 }
@@ -312,8 +318,8 @@ function updateActiveNavLink() {
  * Smooth scrolling initialize
  */
 function initializeSmoothScrolling() {
-    // Tüm internal linkler için smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Sadece # ile başlayan internal linkler için smooth scroll
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
