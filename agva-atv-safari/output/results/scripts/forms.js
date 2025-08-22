@@ -452,7 +452,7 @@ function initializeQuickContactButtons() {
     if (floatingWhatsApp) {
         floatingWhatsApp.addEventListener('click', function(e) {
             e.preventDefault();
-            const message = 'Merhaba! Ağva ATV Safari hakkında bilgi almak istiyorum. 🌟';
+            const message = 'Merhaba Ağva ATV Safari!\n\n🏔️ Bilgi almak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?';
             sendWhatsAppMessage(message);
         });
     }
@@ -462,7 +462,7 @@ function initializeQuickContactButtons() {
     if (headerWhatsApp && headerWhatsApp.href.includes('wa.me')) {
         headerWhatsApp.addEventListener('click', function(e) {
             e.preventDefault();
-            const message = 'Merhaba! Turlarınız hakkında detaylı bilgi alabilir miyim? 😊';
+            const message = 'Merhaba Ağva ATV Safari!\n\n🏔️ Turlarınız hakkında bilgi almak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?';
             sendWhatsAppMessage(message);
         });
     }
@@ -482,7 +482,7 @@ function initializeTourWhatsAppMessages() {
             const tourTitle = tourCard.querySelector('.tour-title')?.textContent || 'Tur';
             const tourPrice = tourCard.querySelector('.tour-price-amount')?.textContent || '';
             
-            const message = `Merhaba! "${tourTitle}" için rezervasyon yapmak istiyorum.\n\n💰 Fiyat: ${tourPrice}\n\nDetaylı bilgi alabilir miyim?`;
+            const message = `Merhaba Ağva ATV Safari!\n\n🏔️ ${tourTitle} için rezervasyon yapmak istiyorum.\n\n💰 Fiyat: ${tourPrice}\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`;
             
             sendWhatsAppMessage(message);
         });
@@ -493,7 +493,7 @@ function initializeTourWhatsAppMessages() {
  * WhatsApp mesaj gönder
  */
 function sendWhatsAppMessage(message) {
-    const phoneNumber = '905551234567';
+    const phoneNumber = '905313533555';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     

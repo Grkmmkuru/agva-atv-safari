@@ -3,8 +3,8 @@
 ## 🎯 Ana Mesajlar
 
 ### Hero Bölümü Metinleri
-- **Ana Başlık**: "Ağva'da Adrenalin Dolu Maceralara Hazır Mısın?"
-- **Alt Başlık**: "Profesyonel ekibimizle güvenli ve unutulmaz ATV, deniz bisikleti ve kara bisikleti turları"
+- **Ana Başlık**: "Ağva'da ATV Safari Macerası!"
+- **Alt Başlık**: "Doğanın kalbinde profesyonel rehberlik eşliğinde ATV ile unutulmaz anılar"
 - **CTA Buton**: "Macerana Başla"
 
 ### Hakkımızda Kısa Metin
@@ -31,8 +31,8 @@
 ## 📞 İletişim Bilgileri
 
 ### Ana İletişim
-- **Telefon**: +90 (555) 123 45 67
-- **WhatsApp**: +90 (555) 123 45 67
+- **Telefon**: +90 (531) 353 35 55
+- **WhatsApp**: +90 (531) 353 35 55
 - **Email**: info@agvaatvsafari.com
 - **Adres**: Ağva Merkez, Şile/İstanbul
 

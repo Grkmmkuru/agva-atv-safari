@@ -38,15 +38,15 @@ async function loadToursData() {
                 {
                     "id": "atv-safari",
                     "title": "ATV Safari Turu",
-                    "description": "Ağva'nın vahşi doğasında ATV ile unutulmaz bir macera deneyimi yaşayın.",
-                    "duration": "2 Saat",
+                    "description": "Ağva'nın doğal güzelliklerinde ATV ile keyifli macera deneyimi. Profesyonel rehberlik ve güvenlik ekipmanı dahil.",
+                    "duration": "1 Saat",
                     "price": 450,
                     "currency": "₺",
-                    "badge": "Popüler",
+                    "badge": "EN POPÜLER",
                     "features": [
-                        "Grup veya Bireysel",
-                        "Güvenlik Ekipmanı Dahil",
-                        "Profesyonel Rehber"
+                        "1 saatlik macera rotası",
+                        "Uzman rehber eşliği", 
+                        "Grup veya bireysel seçenekler"
                     ],
                     "image": "assets/images/tours/atv-safari.jpg",
                     "category": "main"
@@ -54,15 +54,15 @@ async function loadToursData() {
                 {
                     "id": "jet-ski",
                     "title": "Deniz Bisikleti",
-                    "description": "Karadeniz'in serinliğinde hızın ve özgürlüğün tadını çıkarın.",
+                    "description": "Karadeniz'in serinliğinde hızın ve özgürlüğün tadını çıkarın. Güvenli ve eğlenceli deniz macerası.",
                     "duration": "1 Saat",
                     "price": 350,
                     "currency": "₺",
-                    "badge": "Yeni",
+                    "badge": "YENİ",
                     "features": [
-                        "Deniz Manzarası",
-                        "Can Yeleği Dahil",
-                        "Eğitim Verilir"
+                        "1 saatlik deniz keyfi",
+                        "Muhteşem deniz manzarası",
+                        "Can yeleği ve eğitim dahil"
                     ],
                     "image": "assets/images/tours/jet-ski.jpg",
                     "category": "side"
@@ -70,15 +70,15 @@ async function loadToursData() {
                 {
                     "id": "mountain-bike",
                     "title": "Kara Bisikleti Turu",
-                    "description": "Doğa dostu bir şekilde Ağva'nın gizli köşelerini keşfedin.",
-                    "duration": "3 Saat",
+                    "description": "Doğa dostu bisiklet turlarıyla Ağva'nın gizli köşelerini keşfedin. Sessiz ve huzurlu macera.",
+                    "duration": "Saatlik/Günlük",
                     "price": 250,
                     "currency": "₺",
-                    "badge": "Eco",
+                    "badge": "EKO DOSTU",
                     "features": [
-                        "Doğa Rotası",
-                        "Kaliteli Bisiklet",
-                        "Çevre Dostu"
+                        "Saatlik veya günlük kiralama",
+                        "Çevre dostu aktivite",
+                        "Kaliteli dağ bisikletleri"
                     ],
                     "image": "assets/images/tours/mountain-bike.jpg",
                     "category": "side"
@@ -131,7 +131,7 @@ function createTourCard(tour) {
                     <div class="tour-price-duration">${tour.duration}</div>
                 </div>
                 <div class="d-grid gap-2">
-                    <a href="https://wa.me/905551234567?text=${encodeURIComponent(`${tour.title} için rezervasyon yapmak istiyorum.`)}" 
+                    <a href="https://wa.me/905313533555?text=${encodeURIComponent(`Merhaba Ağva ATV Safari!\n\n🏔️ ${tour.title} için rezervasyon yapmak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`)}" 
                        class="btn btn-adventure" target="_blank">
                         <i class="fab fa-whatsapp me-2"></i>Rezervasyon Yap
                     </a>
