@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeGallery();
     initializeLightbox();
+    initializeGalleryFilter();
 });
 
 /**
