@@ -133,9 +133,8 @@ function createTourCard(tour) {
                     </div>
                 </div>
                 <div class="d-grid gap-2">
-                    <a href="https://wa.me/905313533555?text=${encodeURIComponent(`Merhaba Ağva ATV Safari!\n\n🏔️ ${tour.title} için rezervasyon yapmak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`)}" 
-                       class="btn btn-adventure" target="_blank">
-                        <i class="fab fa-whatsapp me-2"></i>Rezervasyon Yap
+                    <a href="tel:+905313533555" class="btn btn-adventure">
+                        <i class="fas fa-phone me-2"></i>Hemen Ara
                     </a>
                 </div>
             </div>
