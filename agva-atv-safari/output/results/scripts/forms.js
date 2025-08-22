@@ -482,7 +482,7 @@ function initializeTourWhatsAppMessages() {
             const tourTitle = tourCard.querySelector('.tour-title')?.textContent || 'Tur';
             const tourPrice = tourCard.querySelector('.tour-price-amount')?.textContent || '';
             
-            const message = `Merhaba Ağva ATV Safari!\n\n🏔️ ${tourTitle} için rezervasyon yapmak istiyorum.\n\n💰 Fiyat: ${tourPrice}\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`;
+            const message = `Merhaba Ağva ATV Safari!\n\n🏔️ ${tourTitle} için rezervasyon yapmak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`;
             
             sendWhatsAppMessage(message);
         });

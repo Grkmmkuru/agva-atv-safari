@@ -126,9 +126,11 @@ function createTourCard(tour) {
                 <ul class="tour-features">
                     ${tour.features.map(feature => `<li>${feature}</li>`).join('')}
                 </ul>
-                <div class="tour-price">
-                    <div class="tour-price-amount">${tour.currency}${tour.price}</div>
-                    <div class="tour-price-duration">${tour.duration}</div>
+                <div class="tour-duration">
+                    <div class="tour-duration-text">
+                        <i class="fas fa-clock me-2 text-success"></i>
+                        <strong>Süre:</strong> ${tour.duration}
+                    </div>
                 </div>
                 <div class="d-grid gap-2">
                     <a href="https://wa.me/905313533555?text=${encodeURIComponent(`Merhaba Ağva ATV Safari!\n\n🏔️ ${tour.title} için rezervasyon yapmak istiyorum.\n\n📅 Tarih: \n👥 Kişi Sayısı: \n📞 İletişim: \n\nDetaylı bilgi alabilir miyim?`)}" 
