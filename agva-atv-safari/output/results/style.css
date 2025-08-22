@@ -906,8 +906,8 @@ footer a:hover {
 /* Blog Post Detail Styles */
 .blog-post-hero {
     position: relative;
-    height: 70vh;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -949,7 +949,8 @@ footer a:hover {
 .blog-post-hero .row {
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    min-height: 500px;
+    width: 100%;
 }
 
 .blog-post-hero .text-center {
@@ -957,11 +958,12 @@ footer a:hover {
 }
 
 .blog-post-hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    line-height: 1.1;
+    color: white;
 }
 
 .blog-post-meta {
@@ -1044,8 +1046,8 @@ footer a:hover {
 /* Blog Mobile Responsiveness */
 @media (max-width: 768px) {
     .blog-post-hero {
-        height: 60vh;
-        min-height: 400px;
+        height: 100vh;
+        min-height: 500px;
     }
     
     .blog-post-image {
@@ -1053,13 +1055,14 @@ footer a:hover {
     }
     
     .blog-post-hero h1 {
-        font-size: 2.2rem !important;
-        margin-bottom: 1rem;
+        font-size: 2.5rem !important;
+        margin-bottom: 1.5rem;
     }
     
     .blog-post-hero .row {
-        min-height: 300px;
+        min-height: 400px;
     }
+}
     
     .blog-content {
         font-size: 1rem;
