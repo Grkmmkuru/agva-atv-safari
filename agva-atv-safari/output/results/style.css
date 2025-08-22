@@ -798,3 +798,38 @@ footer a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
 }
+
+/* ========== Map Container Styles ========== */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.map-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-normal);
+}
+
+/* Responsive Map Styles */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-container iframe {
+        height: 160px;
+    }
+}
